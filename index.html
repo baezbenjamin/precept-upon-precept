@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Precept upon Precept</title>
-    <script src="script/dictionary.js" defer></script>
-    <script src="script/screenshot.js" defer></script>
+    <script src="script/displayScriptures.js" defer></script>
+    <link rel="stylesheet" href="style/small.css">
 </head>
 <body>
-    <header></header>
-    <main>
-        <p>mormon</p>
-        <span>Definition:</span>
-        <span id="definition"></span>
-        <a id="takeshot">Take Screenshot</a>
-    </main>
-    <footer></footer>
+    <h1>Choose a Book</h1>
+    <nav>
+        <ul class="filter">
+            <li hidden><a href="#" class="option active" id="all">All</a></li>
+        </ul>
+    </nav>
+    <article class="passages hide">
+
+    </article>
 </body>
 </html>

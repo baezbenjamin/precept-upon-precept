@@ -11,7 +11,7 @@ async function fetchDefinition() {
         const response = await fetch(usedURL);
         if (response.ok) {
             const data = await response.json();
-            console.log(data[0].shortdef[0]);
+            console.log(data);
             putMeaning(data);
         } else {
             throw Error(await response.text());

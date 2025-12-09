@@ -1,0 +1,23 @@
+span:hover {
+    color: #415D43;
+}
+
+/* article {
+    display: none;
+} */
+
+.hide {
+    display: none;
+}
+
+article a {
+    display: block;
+    /* margin-left: 10px; */
+    padding: 10px;
+}
+
+#takeshot {
+    margin-bottom: 10px;
+    /* padding-top: 20px; */
+    background-color: blanchedalmond;
+}
