@@ -39,6 +39,15 @@ const displayVerse = (verses) => {
                 })
                 verse.appendChild(thisword);
             });
+            // Keep the Scripture Ready
+            const recordItems = getLocalStorage("record") || [];
+            recordItems.push(verse2);
+            setLocalStorage("record", recordItems);
+            // Keep the Time
+            const recordTime = getLocalStorage("record-time") || [];
+            let currrentTimeStamp = Date.now();
+            recordTime.push(currrentTimeStamp);
+            setLocalStorage("record-time", recordTime);
         }
     })
 } 
@@ -62,4 +71,12 @@ async function fetchDefinition(usedURL) {
 
 function putMeaning(data) {
     meaning.textContent = data[0].shortdef[0];
+}
+
+function setLocalStorage(key, data) {
+    localStorage.setItem(key, JSON.stringify(data));
+}
+
+function getLocalStorage(key) {
+    return JSON.parse(localStorage.getItem(key));
 }
