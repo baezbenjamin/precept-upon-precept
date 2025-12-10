@@ -33,7 +33,7 @@ const displayVerse = (verses) => {
                 const thisword = document.createElement("span");
                 thisword.innerHTML = `${word} `;
                 thisword.addEventListener("click", () => {
-                    console.log("Omba'apoi hina!")
+                    // console.log("Omba'apoi hina!")
                     const usedURL = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${thisword.textContent}?key=8962be0b-43a0-48ca-bbfb-710215e73b3e`
                     fetchDefinition(usedURL);
                 })
@@ -59,7 +59,7 @@ async function fetchDefinition(usedURL) {
         const response = await fetch(usedURL);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
+            // console.log(data);
             putMeaning(data);
         } else {
             throw Error(await response.text());
