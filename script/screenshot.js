@@ -1,11 +1,37 @@
 const ssButton = document.querySelector("a");
 
-const siteAddress = window.location.href;
+const initialURL = window.location.href;
 
-const newURL = `https://shot.screenshotapi.net/v3/screenshot?token=KRDVN1X-P0HMYE3-J6PHZ2P-7H71FNQ&fresh=true&url=${siteAddress}&output=image&file_type=png&wait_for_event=load`;
+function modifyURL(URL) {
+    let list = URL.split("");
+    let newURL = "";
+    list.forEach(letter => {
+        if (letter == ":") {
+            letter = "%3A";
+        } else if (letter == "/") {
+            letter = "%2F";
+        } else if (letter == "?") {
+            letter = "%3F";
+        } else if (letter == "=") {
+            letter = "%3D";
+        } else if (letter == "&") {
+            letter = "%26";
+        }
+        newURL = newURL + letter;
+    })
+    return newURL;
+}
 
-const lostURL = "https://shot.screenshotapi.net/v3/screenshot?token=KRDVN1X-P0HMYE3-J6PHZ2P-7H71FNQ&fresh=true&url=https%3A%2F%2Fbaezbenjamin.github.io%2Fprecept-upon-precept%2Fverse_page.html%3Fbook%3DAmos%26chapter%3D3%26verse%3D7&output=image&file_type=png&wait_for_event=load";
+newURL = modifyURL(initialURL);
 
-// ssButton.setAttribute("href", newURL);
+const screenshotURL = `https://shot.screenshotapi.net/v3/screenshot?token=KRDVN1X-P0HMYE3-J6PHZ2P-7H71FNQ&fresh=true&url=${newURL}&output=image&file_type=png&wait_for_event=load`;
 
-ssButton.setAttribute("href", lostURL);
+ssButton.setAttribute("href", screenshotURL);
+
+// List = [
+//     ":", "%3A",
+//     "/", "%2F",
+//     "?", "%3F",
+//     "=", "%3D",
+//     "&", "%26",
+// ]
