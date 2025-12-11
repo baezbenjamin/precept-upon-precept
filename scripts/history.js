@@ -14,7 +14,7 @@ function renderRecord() {
 function displayTemplate(scripture, time) {
     const content = document.createElement("p");
     let thisTime = new Date(time);
-    content.innerHTML = `You read <strong>${scripture.book} ${scripture.chapter}:${scripture.verse}</strong> on ${thisTime}`
+    content.innerHTML = `You read <a href="verse_page.html?book=${scripture.book}&chapter=${scripture.chapter}&verse=${scripture.verse}">${scripture.book} ${scripture.chapter}:${scripture.verse}</a> on ${thisTime}`
     historyDisplay.appendChild(content)
 }
 

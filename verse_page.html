@@ -4,24 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Precept upon Precept</title>
-    <script src="script/display_verse.js" defer></script>
-    <script src="script/screenshot.js" defer></script>
-    <link rel="stylesheet" href="style/small.css">
+    <meta name="author" content="Benjamin Baez">
+    <meta name="description" content="Study the Scriptures with help of a dictionary">
+    
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/display_verse.js" defer></script>
+    <script src="scripts/screenshot.js" defer></script>
+    <script src="scripts/random_scripture.js" defer></script>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-
+        <img src="images/book-half.svg" alt="Logo Precept upon Precept">
+        <span>Precept upon precept</span>
+        <button id="ham-btn" class="hamburguer" aria-label="Display Menu"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="history.html">History</a></li>
+                <li><a id="ranVer">Random Verse</a></li>
+                <li><a href="how-to-use.html">How to Use</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div id="verse"></div>
-    </main>
-    <footer>
         <h3>Definition:</h3>
         <div id="definition">
-
+            <p>Select a word of the verse to see...</p>
         </div>
-        <a id="takeshot" target="_blank">Take Screenshot</a>
-        <!-- <a id="takeshot" target="_blank">Take Screenshot</a> -->
+        <section class="finalButton">
+            <a id="takeshot" target="_blank">Take Screenshot</a>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy;2025💻 Benjamin Baez 🛠 Luque, Paraguay</p>
+        <p>WDD 330 Final Project - Precept upon Precept</p>
     </footer>
 </body>
 </html>

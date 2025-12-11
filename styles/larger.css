@@ -1,0 +1,62 @@
+@media only screen and (min-width: 600px) {
+    header, main, nav, footer {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    /* Header */
+    header {
+        display: grid;
+        grid-template-columns: 24px auto 300px;
+    }
+
+    .hamburguer {
+        display: none;
+    }
+
+    .navigation {
+        display: inline;
+        grid-column: 3 / 4;
+    }
+
+    .navigation ul {
+        display: flex;
+    }
+
+    .navigation a {
+        border: none;
+        text-align: center;
+    }
+
+    /* Home */
+    .filter, .scriptures {
+        max-width: 900px;
+    }
+
+    .passages {
+        margin: 0 auto;
+        max-width: 700px;
+    }
+
+    /* Verse */
+    #verse {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    #definition {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* History */
+    #history {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .tutorial {
+        margin: 0 auto;
+        max-width: 700px;
+    }
+}

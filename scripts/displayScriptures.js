@@ -1,9 +1,9 @@
 const passages = document.querySelector(".passages");
-
+const passagesTitle = document.querySelector(".title");
 const randomLink = document.querySelector("#ranVer");
 
 async function getPassage() {
-    const response = await fetch("json/verses.json");
+    const response = await fetch("data/verses.json");
     const data = await response.json();
     displayPassage(data.verses);
     displayFilterOptions(data.verses);
@@ -44,7 +44,10 @@ const displayFilterOptions = (verses) => {
             options.appendChild(select);
             select.addEventListener("click", () => {
                 displayPassage(verses.filter(part => part.scripture == `${option.scripture}`))
-                passages.classList.remove('hide')
+                passages.classList.remove('hide');
+                passagesTitle.classList.remove('hide');
+                passages.classList.add('show');
+                passagesTitle.classList.add('show');
             })
         }
         scriptureList.push(`${option.scripture}`);

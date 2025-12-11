@@ -4,22 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Precept upon Precept</title>
-    <script src="script/displayScriptures.js" defer></script>
-    <link rel="stylesheet" href="style/small.css">
+    <meta name="author" content="Benjamin Baez">
+    <meta name="description" content="Study the Scriptures with help of a dictionary">
+    
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/displayScriptures.js" defer></script>
+    
+    <link rel="icon" href="favicon.ico" >
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Choose a Book</h1>
-    <nav>
-        <ul class="filter">
-            <li hidden><a href="#" class="option active" id="all">All</a></li>
-        </ul>
-    </nav>
-    <article class="passages hide">
-
-    </article>
+    <header>
+        <img src="images/book-half.svg" alt="Logo Precept upon Precept">
+        <span>Precept upon precept</span>
+        <button id="ham-btn" class="hamburguer" aria-label="Display Menu"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="history.html">History</a></li>
+                <li><a id="ranVer">Random Verse</a></li>
+                <li><a href="how-to-use.html">How to Use</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to Precept upon Precept</h1>
+        <h2>Your definitions study tool</h2>
+        <h3>Search among selected verses to study</h3>
+        <nav class="scriptures">
+            <ul class="filter">
+            </ul>
+        </nav>
+        <h3 class="title hide">Verses Available</h3>
+        <article class="passages hide">
+        </article>
+    </main>
     <footer>
-        <a href="history.html">History</a><br>
-        <a id="ranVer">Random Verse</a>
+        <p>&copy;2025💻 Benjamin Baez 🛠 Luque, Paraguay</p>
+        <p>WDD 330 Final Project - Precept upon Precept</p>
     </footer>
 </body>
 </html>

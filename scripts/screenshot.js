@@ -1,4 +1,4 @@
-const ssButton = document.querySelector("a");
+const ssButton = document.querySelector("#takeshot");
 
 const initialURL = window.location.href;
 
@@ -27,11 +27,3 @@ newURL = modifyURL(initialURL);
 const screenshotURL = `https://shot.screenshotapi.net/v3/screenshot?token=KRDVN1X-P0HMYE3-J6PHZ2P-7H71FNQ&fresh=true&url=${newURL}&output=image&file_type=png&wait_for_event=load`;
 
 ssButton.setAttribute("href", screenshotURL);
-
-// List = [
-//     ":", "%3A",
-//     "/", "%2F",
-//     "?", "%3F",
-//     "=", "%3D",
-//     "&", "%26",
-// ]

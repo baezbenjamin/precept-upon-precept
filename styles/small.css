@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #415D43;
+    --secondary-color: #8FC0A9;
+    --accent-color: #C8D5B9;
+    --background-color: #FAF3DD;
+    --highlight-color: #3CBD46;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+span:hover {
+    color: var(--highlight-color);
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hide {
+    display: none;
+}
+
+article a {
+    display: block;
+    padding: 10px;
+}
+
+#takeshot {
+    margin-bottom: 10px;
+    background-color: blanchedalmond;
+}
+
+/* Header */
+
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: center;
+    border-bottom: solid 1px var(--secondary-color);
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 4px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.hamburguer {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburguer::before {
+    content: "\2630";
+}
+
+.hamburguer.show::before {
+    content: "\00D7";
+}
+
+.navigation {
+    display: none;
+    grid-column: 1 / 4;
+}
+
+.navigation.show {
+    display: block;
+    border-top: solid 1px var(--secondary-color);
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .5rem 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: solid 1px #eee;
+
+}
+
+.navigation li.current {
+    background-color: #eee;
+}
+
+.navigation a:hover {
+    color: var(--background-color);
+    text-decoration: underline;
+    background-color: var(--primary-color);
+}
+
+/* Home */
+
+h1, h2, h3 {
+    text-align: center;
+    margin: 15px;
+}
+
+.scriptures {
+    align-self: center;
+}
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+
+.filter li {
+    list-style: none;
+    width: 90px;
+    height: 100px;
+    background-color: black;
+    margin: 10px;
+    text-align: center;
+    padding-top: 10px;
+    cursor:pointer
+}
+
+.option {
+    color: yellow;
+    text-decoration: none;
+}
+
+.title.show {
+    margin: 10px;
+}
+
+.passages.show {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+/* Footer */
+
+footer {
+    border-top: solid 1px var(--secondary-color);
+    text-align: center;
+}
+
+/* Verse Page */
+
+#verse {
+    margin-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    margin-right: 10px;
+}
+
+span.highlight {
+    color: var(--highlight-color);
+}
+
+#definition {
+    margin-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid 1px var(--primary-color);
+    margin-right: 10px;
+}
+
+.finalButton {
+    text-align: center;
+    padding: 1rem;
+}
+
+#takeshot {
+    background-color: var(--primary-color);
+    width: 300px;
+    color: var(--background-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;   
+}
+
+.important {
+    text-transform: capitalize;
+}
+
+#definition p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* History */
+
+#history {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Tutorial */
+.tutorial img {
+    width: 50%;
+    height: auto;
+    border: solid 1px #415D43;
+}
